@@ -1,7 +1,7 @@
 name: Welcome to the party (second)
 on:
   workflow_dispatch:
-  jobs:
+jobs:
     say_hello:
       name: "Let's greet the user!"
       runs-on: ubuntu-latest
