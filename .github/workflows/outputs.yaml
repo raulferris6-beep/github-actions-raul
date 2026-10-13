@@ -1,3 +1,7 @@
+name: Outputs between steps
+on:
+  workflow_dispatch:
+
 jobs:
   say_hello:
     name: "Let's greet the user!"
@@ -8,5 +12,4 @@ jobs:
         run: |
           curTime=$(date)
           echo "currenttime=${curTime}" >> $GITHUB_OUTPUT
-      - run: echo "The time from the early step is
-          ${{ steps.get-time.outputs.currenttime}}"
+      - run: echo "The time from the early step is ${{ steps.get-time.outputs.currenttime }}"

@@ -5,10 +5,10 @@ on:
       thename:
         description: 'What is your name?'
         required: true
+
 jobs:
   say_hello:
     name: "Let's greet the user!"
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello there, ${{ inputs.thename}}!"
-      
+      - run: echo "Hello there, ${{ inputs.thename }}!"
