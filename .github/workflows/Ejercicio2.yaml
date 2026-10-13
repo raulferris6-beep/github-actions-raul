@@ -1,0 +1,21 @@
+name: Ejercicio 2 - Manejo de secretos
+on:
+  workflow_dispatch:
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simular login
+        env:
+          USUARIO: "raul"
+          PASSWORD: ${{ secrets.MI_PASSWORD }}
+        run: |
+          echo "Intentando login con el usuario: $USUARIO"
+          echo "La contrasena es: $PASSWORD"
+          if [ -n "$PASSWORD" ]; then
+            echo " Login correcto"
+          else
+            echo " No se ha encontrado el secreto"
+            exit 1
+          fi

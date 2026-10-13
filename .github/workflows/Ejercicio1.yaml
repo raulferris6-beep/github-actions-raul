@@ -1,0 +1,20 @@
+name: Ejercicio 1 - Variables de entorno globales
+on:
+  workflow_dispatch:
+
+env:
+  SALUDO: "Hola desde una variable global"
+  CURSO: "EDEM DevOps"
+
+jobs:
+  job-uno:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Usar la variable en el job 1
+        run: echo "Job 1 -> $SALUDO ($CURSO)"
+
+  job-dos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Usar la variable en el job 2
+        run: echo "Job 2 -> ${{ env.SALUDO }} ($CURSO)"
