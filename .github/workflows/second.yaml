@@ -4,7 +4,7 @@ on:
   jobs:
     say_hello:
       name: "Let's greet the user!"
-      runs-on: ubuntu-ubuntu_latest
+      runs-on: ubuntu-latest
       steps:
         - run: echo "Hello there!"
         - uses: actions/checkout@v3
