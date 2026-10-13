@@ -1,8 +1,8 @@
 on:
-workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-say_hello:
-runs-on: ubuntu_latest
-steps:
-- run: echo "Hello there!"
+  say_hello:
+    runs-on: ubuntu_latest
+    steps:
+      - run: echo "Hello there!"
