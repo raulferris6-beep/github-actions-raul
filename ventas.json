@@ -1,0 +1,7 @@
+{
+  "ventas": [
+    { "id": 1, "producto": "Gafas de sol", "importe": 45.5 },
+    { "id": 2, "producto": "Auriculares", "importe": 30.0 },
+    { "id": 3, "producto": "Chaqueta", "importe": 60.25 }
+  ]
+}
